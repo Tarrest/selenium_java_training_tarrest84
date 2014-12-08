@@ -1,0 +1,6 @@
+ua\kh\roma\webdriver\AuthenticatedHtmlUnitDriver.class
+ua\kh\roma\pages\Page.class
+ua\kh\roma\util\PropertyLoader.class
+ua\kh\roma\pages\HomePage.class
+ua\kh\roma\webdriver\WebDriverFactory.class
+ua\kh\roma\util\Browser.class
