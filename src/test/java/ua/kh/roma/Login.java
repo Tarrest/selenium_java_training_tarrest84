@@ -2,10 +2,13 @@ package ua.kh.roma;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -17,10 +20,12 @@ public class Login extends ua.kh.roma.pages.TestBase {
   @Test
   public void testUntitled() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("admin");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("admin");
+    WebElement userNameField = driver.findElement(By.id("username"));
+	userNameField.clear();
+    userNameField.sendKeys("admin");
+    WebElement passField = driver.findElement(By.name("password1"));
+	passField.clear();
+    passField.sendKeys("admin");
     driver.findElement(By.name("submit")).click();
   }
 
